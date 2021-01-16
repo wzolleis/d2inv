@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DivinvAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="divinv-app.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="de.wz.divinv.DivinvAppApplication" />
+    <option name="HIDE_BANNER" value="true" />
+    <option name="ACTIVE_PROFILES" value="local" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
