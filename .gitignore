@@ -36,7 +36,7 @@ out/
 ### VS Code ###
 .vscode/
 
-database/postgres_anpassungen.txt
-src/main/resources/application.local.properties
+database/999_postgres_anpassungen.txt
+src/main/resources/application-local.properties
 .gradle
 gradle

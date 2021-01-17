@@ -1,14 +1,15 @@
 package de.wz.divinv.application.controller
 
-import de.wz.divinv.domain.mods.Modification
+import de.wz.divinv.domain.mods.model.SkillMod
+import de.wz.divinv.domain.mods.service.ModService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class ModificationController {
+class ModsController(val modService: ModService) {
     @GetMapping("/modification")
-    fun list(): ResponseEntity<List<Modification>> {
-        return ResponseEntity.ok(listOf(Modification("test")))
+    fun listSkillMods(): ResponseEntity<List<SkillMod>> {
+        return ResponseEntity.ok(modService.listSkillMods())
     }
 }

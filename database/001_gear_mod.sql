@@ -2,7 +2,7 @@
 
 -- DROP TABLE divinv.gear_mod;
 
-CREATE TABLE divinv.gear_mod
+CREATE TABLE GEAR_MOD
 (
     id bigint NOT NULL,
     type character varying(200) COLLATE pg_catalog."default" NOT NULL,
@@ -13,5 +13,5 @@ CREATE TABLE divinv.gear_mod
 
     TABLESPACE pg_default;
 
-ALTER TABLE divinv.gear_mod
-    OWNER to postgres;
+-- ALTER TABLE GEAR_MOD
+--     OWNER to postgres;
