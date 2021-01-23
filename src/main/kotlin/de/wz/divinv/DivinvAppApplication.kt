@@ -1,4 +1,4 @@
-package de.wz.divinv.application.app
+package de.wz.divinv
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

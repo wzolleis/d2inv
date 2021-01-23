@@ -4,9 +4,7 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface GearModStore : CrudRepository<GearModEntity, Long> {
-
-}
+interface GearModStore : CrudRepository<GearModEntity, Long>
 
 @Repository
 interface SkillModStore : CrudRepository<SkillModEntity, Long> {

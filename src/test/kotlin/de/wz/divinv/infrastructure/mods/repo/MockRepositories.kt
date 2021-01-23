@@ -1,4 +1,4 @@
-package de.wz.divinv.infrastructure.repo
+package de.wz.divinv.infrastructure.mods.repo
 
 import de.wz.divinv.domain.mods.model.GearMod
 import de.wz.divinv.domain.mods.model.SkillMod
