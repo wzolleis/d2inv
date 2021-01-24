@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Profile
 @Profile("test")
 class DivInvTestConfig {
     @Bean
-    fun skillServiceMock(): ModService = ModServiceMock()
+    fun skillServiceMock(): ModService = ModServiceMock(skillModRepoMock(), gearModRepoMock())
 
     @Bean
     fun gearModRepoMock(): GearModRepo = GearModRepoMock()
