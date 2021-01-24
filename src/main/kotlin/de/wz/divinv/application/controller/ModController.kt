@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class ModsController(val modService: ModService) {
+class ModController(val modService: ModService) {
 
     @GetMapping(
         value = ["/api/modification"],

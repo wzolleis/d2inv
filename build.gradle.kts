@@ -8,6 +8,7 @@ plugins {
     kotlin("jvm") version "1.4.21"
     kotlin("plugin.spring") version "1.4.21"
     kotlin("plugin.allopen") version "1.3.61"
+    kotlin("plugin.serialization") version "1.4.10"
 }
 
 group = "de.wz.divinv"
@@ -33,17 +34,21 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("javax.xml.bind:jaxb-api:2.3.0")
+    implementation(Libs.kotlinxSerialization)
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude("org.junit.vintage:junit-vintage-engine")
+        exclude("mockito-core")
     }
 
     testImplementation(Libs.kotestRunnerJunit5)
     testImplementation(Libs.kotestAssertionsCore)
     testImplementation(Libs.kotestExtensionsSpring)
-
+    testImplementation(Libs.mockk)
+    testImplementation(Libs.mockkSpring)
 }
 
 allOpen {

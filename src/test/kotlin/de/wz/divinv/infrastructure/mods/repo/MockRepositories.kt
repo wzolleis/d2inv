@@ -10,17 +10,18 @@ import org.springframework.stereotype.Repository
 
 
 object ModTestData {
-    val gearMods: List<GearMod> = listOf()
-    val skillMods: List<SkillMod> = listOf(
-        SkillMod(
-            id = 666,
-            type = "test_type",
-            slot = "test_slot",
-            attribute = "test_attr",
-            attribute_zusatz = "test_attr_zusatz",
-            level = "999"
-        )
+    val skillMod = SkillMod(
+        id = 666,
+        type = "test_type",
+        slot = "test_slot",
+        attribute = "test_attr",
+        attribute_zusatz = "test_attr_zusatz",
+        level = "999"
     )
+
+
+    val gearMods: List<GearMod> = listOf()
+    val skillMods: List<SkillMod> = listOf(skillMod)
 }
 
 class SkillModRepoMock() : SkillModRepo {
