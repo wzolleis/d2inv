@@ -1,5 +1,6 @@
 package de.wz.divinv.application.controller
 
+import de.wz.divinv.domain.mods.model.SkillMod
 import de.wz.divinv.domain.mods.model.SkillModList
 import de.wz.divinv.domain.mods.service.ModService
 import org.springframework.http.MediaType
@@ -17,6 +18,18 @@ class ModController(val modService: ModService) {
     )
     fun listSkillMods(): ResponseEntity<SkillModList> {
         val result = modService.listSkillMods()
-        return ResponseEntity.ok(SkillModList(result))
+
+        val responseMock = listOf(
+            SkillMod(
+                id = 666,
+                type = "test_type",
+                slot = "test_slot",
+                attribute = "test_attr",
+                attribute_zusatz = "test_attr_zusatz",
+                level = "999"
+            )
+        )
+
+        return ResponseEntity.ok(SkillModList(responseMock))
     }
 }
