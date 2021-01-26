@@ -9,6 +9,7 @@ plugins {
     kotlin("plugin.spring") version "1.4.21"
     kotlin("plugin.allopen") version "1.3.61"
     kotlin("plugin.serialization") version "1.4.10"
+    id("com.github.node-gradle.node") version "2.2.4"
 }
 
 group = "de.wz.divinv"
@@ -67,3 +68,40 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+//node {
+//    download = true
+//
+//    // Set the work directory for unpacking node
+//    workDir = file("${project.buildDir}/nodejs")
+//
+//    // Set the work directory for NPM
+//    npmWorkDir = file("${project.buildDir}/npm")
+//}
+//
+//task appNpmInstall (type: NpmTask) {
+//    description = "Installs all dependencies from package.json"
+//    workingDir = file("${project.projectDir}/src/main/webapp")
+//    args = ["install"]
+//}
+//
+//task appNpmBuild (type: NpmTask) {
+//    description = "Builds production version of the webapp"
+//    workingDir = file("${project.projectDir}/src/main/webapp")
+//    args = ["run", "build"]
+//}
+//
+
+tasks.create<Copy>("copyWebApp") {
+    from("src/main/webapp/build")
+    into("build/resources/main/static/.")
+}
+
+tasks.named("assemble") {
+    dependsOn("copyWebApp")
+    dependsOn("npm_build")
+}
+
+//appNpmBuild.dependsOn appNpmInstall
+//copyWebApp.dependsOn appNpmBuild
+//compile.dependsOn copyWebApp

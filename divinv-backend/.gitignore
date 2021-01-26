@@ -40,3 +40,5 @@ database/999_postgres_anpassungen.txt
 src/main/resources/application-local.properties
 .gradle
 gradle
+
+src/main/webapp/build
