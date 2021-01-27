@@ -16,6 +16,7 @@ group = "de.wz.divinv"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
+val frontendDirectory = "../divinv-frontend"
 
 configurations {
     compileOnly {
@@ -69,39 +70,51 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-//node {
-//    download = true
-//
-//    // Set the work directory for unpacking node
-//    workDir = file("${project.buildDir}/nodejs")
-//
-//    // Set the work directory for NPM
-//    npmWorkDir = file("${project.buildDir}/npm")
-//}
-//
-//task appNpmInstall (type: NpmTask) {
-//    description = "Installs all dependencies from package.json"
-//    workingDir = file("${project.projectDir}/src/main/webapp")
-//    args = ["install"]
-//}
-//
-//task appNpmBuild (type: NpmTask) {
-//    description = "Builds production version of the webapp"
-//    workingDir = file("${project.projectDir}/src/main/webapp")
-//    args = ["run", "build"]
-//}
-//
+node {
+    nodeModulesDir = file("$frontendDirectory/node_modules")
+    version  = "12.16.1"
+    download = false
+    distBaseUrl = "http://nodejs.org/dist"
+    npmWorkDir = file("$frontendDirectory")
+    workDir = file("$frontendDirectory/node")
+}
 
-tasks.create<Copy>("copyWebApp") {
-    from("src/main/webapp/build")
-    into("build/resources/main/static/.")
+/**
+ * Definiert die Task, die den Build (npm build) ausführt
+ */
+//tasks.named<com.moowork.gradle.node.npm.NpmTask>("npm_run_build") {
+//    // make sure the build task is executed only when appropriate files change
+//    inputs.files(fileTree("${frontendDirectory}/public"))
+//    inputs.files(fileTree("${frontendDirectory}/src"))
+//
+//    // "node_modules" appeared not reliable for dependency change detection (the task was rerun without changes)
+//    // though "package.json" and "package-lock.json" should be enough anyway
+//    inputs.file("${frontendDirectory}/package.json")
+//    inputs.file("${frontendDirectory}/package-lock.json")
+//    outputs.dir("${frontendDirectory}/build")
+//}
+
+/** NPM Build: Baut den Javascript-Client nach /build. */
+//val buildNpmApp by tasks.registering(Jar::class) {
+//    dependsOn("npm_run_build")
+//}
+
+/** Kopiert die vom NPM-Build erzeugten Resourcen ins richtige Unterverzeichnis, so dass sie komplett ins Jarfile aufgenommen werden.
+ *  Beim Start des ServiceInventory-Servers aus IntelliJ heraus werden die Resourcen aus dem Copy-Task auch verwendet. */
+val copyNpmBuildFiles by tasks.registering(Copy::class) {
+//    dependsOn(buildNpmApp)
+    from("$frontendDirectory/build")
+    // Für die Webjar müssen unsere Client-Resourcen dann unter META-INF/resources liegen.
+    // Das Verzeichnis /ui-static wird dann vom Server ausgeliefert.
+    into("$buildDir/resources/main/META-INF/resources/ui-static/")
+    exclude("kotlin", "resources", "tmp", "libs")
+    include(
+        "**/*.js", "**/*.png", "**/*.css", "**/*.html", "**/*.map", "**/*.txt",
+        "**/*.woff", "**/*.woff2", "**/*.ttf", "**/*.eot", "**/*.svg", "**/*.json"
+    )
 }
 
 tasks.named("assemble") {
-    dependsOn("copyWebApp")
-    dependsOn("npm_build")
+//    dependsOn(buildNpmApp)
+    dependsOn("copyNpmBuildFiles")
 }
-
-//appNpmBuild.dependsOn appNpmInstall
-//copyWebApp.dependsOn appNpmBuild
-//compile.dependsOn copyWebApp
