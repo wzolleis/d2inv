@@ -15,5 +15,5 @@ repositories {
 }
 
 tasks.assemble {
-    dependsOn("npm_build")
+    dependsOn("npm_run_build")
 }
