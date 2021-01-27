@@ -17,3 +17,19 @@ repositories {
 tasks.assemble {
     dependsOn("npm_run_build")
 }
+
+/**
+* Definiert die Task, die den Build (npm build) ausführt
+*/
+tasks.named<com.moowork.gradle.node.npm.NpmTask>("npm_run_build") {
+    // make sure the build task is executed only when appropriate files change
+    inputs.files(fileTree("public"))
+    inputs.files(fileTree("src"))
+
+    // "node_modules" appeared not reliable for dependency change detection (the task was rerun without changes)
+    // though "package.json" and "package-lock.json" should be enough anyway
+    inputs.file("package.json")
+    inputs.file("package-lock.json")
+
+    outputs.dir("build")
+}
