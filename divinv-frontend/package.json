@@ -2,6 +2,7 @@
   "name": "divinv-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/ui-static",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
@@ -22,7 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "copyfiles build/**/* ../divinv-backend/build/resources/main/META-INF/resources/ui-static",
+    "copy:files": "copyfiles -u 1 build/**/* ../divinv-backend/build/resources/main/public/ui-static",
+    "postbuild": "npm run copy:files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

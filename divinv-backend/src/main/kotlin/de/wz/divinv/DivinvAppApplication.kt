@@ -2,8 +2,11 @@ package de.wz.divinv
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.context.annotation.ComponentScan
 
-@SpringBootApplication
+@SpringBootApplication(
+    scanBasePackages = ["de.wz.divinv"]
+)
 class DivinvAppApplication
 
 fun main(args: Array<String>) {

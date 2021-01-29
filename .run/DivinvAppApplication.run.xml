@@ -1,8 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="DivinvAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <module name="divinv-app.main" />
+    <module name="divinv-app.divinv-backend.main" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="de.wz.divinv.DivinvAppApplication" />
-    <option name="HIDE_BANNER" value="true" />
     <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
@@ -10,13 +9,32 @@
     </method>
   </configuration>
   <configuration default="false" name="DivinvAppApplication Mock" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <module name="divinv-app.main" />
+    <module name="divinv-app.divinv-backend.main" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="de.wz.divinv.application.app.DivinvAppApplication" />
     <option name="HIDE_BANNER" value="true" />
     <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local,test" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
       <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+  <configuration default="false" name="DivinvAppApplication with UI" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="divinv-app.divinv-backend.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="de.wz.divinv.DivinvAppApplication" />
+    <option name="DEBUG_MODE" value="true" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="NpmBeforeRunTask" enabled="true">
+        <package-json value="$PROJECT_DIR$/divinv-frontend/package.json" />
+        <command value="run" />
+        <scripts>
+          <script value="build" />
+        </scripts>
+        <node-interpreter value="project" />
+        <envs />
+      </option>
     </method>
   </configuration>
 </component>
