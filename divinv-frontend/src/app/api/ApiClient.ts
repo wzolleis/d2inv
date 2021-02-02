@@ -1,14 +1,21 @@
+import axios, {AxiosResponse} from 'axios';
+
 class ApiClient {
-    async fetchModification(): Promise<SkillModList> {
-        const response = await fetch("/api/modification", {
-            headers: {
-                "content-type": "application/json",
-                "accepts": "application/json"
+    async fetchSkillMods(): Promise<SkillModList> {
+        try {
+            const response: AxiosResponse<SkillModList> = await axios.get("/api/modification",
+                {
+                    headers: {
+                        "content-type": "application/json",
+                        "accepts": "application/json"
+                    }
+                });
+            return response.data
+        } catch (error) {
+            return {
+                skillMods: []
             }
-        })
-        const txt = await response.text()
-        const skillMods: SkillModList = JSON.parse(txt)
-        return Promise.resolve(skillMods)
+        }
     }
 }
 

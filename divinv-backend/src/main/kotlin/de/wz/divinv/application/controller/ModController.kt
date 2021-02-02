@@ -13,7 +13,6 @@ class ModController(val modService: ModService) {
 
     @GetMapping(
         value = ["/api/modification"],
-        consumes = [MediaType.APPLICATION_JSON_VALUE],
         produces = [MediaType.APPLICATION_JSON_VALUE]
     )
     fun listSkillMods(): ResponseEntity<SkillModList> {

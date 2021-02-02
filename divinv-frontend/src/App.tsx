@@ -8,7 +8,7 @@ export const App = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            return await ApiClient.fetchModification()
+            return await ApiClient.fetchSkillMods()
         }
 
         fetchData().then((mods) => {
