@@ -1,7 +1,7 @@
 package de.wz.divinv.infrastructure.mods.repo
 
-import de.wz.divinv.domain.mods.model.GearMod
-import de.wz.divinv.domain.mods.model.SkillMod
+import de.wz.divinv.domain.gear.model.GearMod
+import de.wz.divinv.domain.gear.model.SkillMod
 
 fun GearModEntity.toDomain(): GearMod {
     return GearMod(

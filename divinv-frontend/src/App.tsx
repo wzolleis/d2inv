@@ -21,6 +21,14 @@ export const App = () => {
 
     return (
         <div className="App">
+            <div className="col-md-8 mx-auto">
+                <h1>Hello, world!</h1>
+                <p>You've successfully loaded up the Bootstrap npm starter project!</p>
+                <p>If this button looks blue and the text purple, you've done it.</p>
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click
+                    me!
+                </button>
+            </div>
             <SkillModComponent/>
         </div>
     );

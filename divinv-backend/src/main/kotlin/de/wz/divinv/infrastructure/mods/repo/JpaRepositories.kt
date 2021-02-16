@@ -1,14 +1,14 @@
 package de.wz.divinv.infrastructure.mods.repo
 
-import de.wz.divinv.domain.mods.model.GearMod
-import de.wz.divinv.domain.mods.model.SkillMod
-import de.wz.divinv.domain.mods.repo.GearModRepo
-import de.wz.divinv.domain.mods.repo.SkillModRepo
+import de.wz.divinv.domain.gear.model.GearMod
+import de.wz.divinv.domain.gear.model.SkillMod
+import de.wz.divinv.domain.gear.repo.GearModRepo
+import de.wz.divinv.domain.gear.repo.SkillModRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.transaction.annotation.Transactional
 
 @Transactional
-class SkillModRepoJpa: SkillModRepo {
+open class SkillModRepoJpa: SkillModRepo {
     @Autowired
     lateinit var store: SkillModStore
 
@@ -19,7 +19,7 @@ class SkillModRepoJpa: SkillModRepo {
 }
 
 @Transactional
-class GearModRepoJpa() : GearModRepo {
+open class GearModRepoJpa() : GearModRepo {
     @Autowired
     lateinit var store: GearModStore
 

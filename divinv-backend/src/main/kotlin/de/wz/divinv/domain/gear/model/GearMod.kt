@@ -1,4 +1,4 @@
-package de.wz.divinv.domain.mods.model
+package de.wz.divinv.domain.gear.model
 
 import kotlinx.serialization.Serializable
 

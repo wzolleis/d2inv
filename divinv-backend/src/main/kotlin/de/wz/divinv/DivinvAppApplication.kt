@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan
 @SpringBootApplication(
     scanBasePackages = ["de.wz.divinv"]
 )
-class DivinvAppApplication
+open class DivinvAppApplication
 
 fun main(args: Array<String>) {
     runApplication<DivinvAppApplication>(*args)

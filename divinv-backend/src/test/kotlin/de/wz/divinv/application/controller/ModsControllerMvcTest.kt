@@ -2,15 +2,12 @@ package de.wz.divinv.application.controller
 
 import de.wz.divinv.DivinvAppApplication
 import de.wz.divinv.application.config.DivInvConfig
-import de.wz.divinv.application.config.DivInvTestConfig
-import de.wz.divinv.domain.mods.service.ModService
+import de.wz.divinv.domain.gear.service.ModService
 import io.kotest.core.spec.style.StringSpec
-import io.kotest.core.test.Description
 import io.kotest.core.test.TestCase
 import io.kotest.matchers.shouldNotBe
 import io.kotest.matchers.types.shouldBeInstanceOf
 import io.kotest.spring.SpringListener
-import org.mockito.MockitoAnnotations
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
@@ -23,10 +20,6 @@ import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup
 import org.springframework.web.context.WebApplicationContext
 import org.springframework.mock.web.MockServletContext
-
-import javax.servlet.ServletContext
-
-
 
 
 @ActiveProfiles("local", "test")

@@ -1,9 +1,9 @@
-package de.wz.divinv.domain.mods.service
+package de.wz.divinv.domain.gear.service
 
-import de.wz.divinv.domain.mods.model.GearMod
-import de.wz.divinv.domain.mods.model.SkillMod
-import de.wz.divinv.domain.mods.repo.GearModRepo
-import de.wz.divinv.domain.mods.repo.SkillModRepo
+import de.wz.divinv.domain.gear.model.GearMod
+import de.wz.divinv.domain.gear.model.SkillMod
+import de.wz.divinv.domain.gear.repo.GearModRepo
+import de.wz.divinv.domain.gear.repo.SkillModRepo
 
 class ModServiceJpa(private val gearModRepo: GearModRepo, private val skillModRepo: SkillModRepo) : ModService {
     override fun listGearMods(): List<GearMod> = gearModRepo.listAll()

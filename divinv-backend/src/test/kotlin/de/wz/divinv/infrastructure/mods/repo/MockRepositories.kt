@@ -1,12 +1,9 @@
 package de.wz.divinv.infrastructure.mods.repo
 
-import de.wz.divinv.domain.mods.model.GearMod
-import de.wz.divinv.domain.mods.model.SkillMod
-import de.wz.divinv.domain.mods.repo.GearModRepo
-import de.wz.divinv.domain.mods.repo.SkillModRepo
-import org.springframework.context.annotation.Profile
-import org.springframework.stereotype.Component
-import org.springframework.stereotype.Repository
+import de.wz.divinv.domain.gear.model.GearMod
+import de.wz.divinv.domain.gear.model.SkillMod
+import de.wz.divinv.domain.gear.repo.GearModRepo
+import de.wz.divinv.domain.gear.repo.SkillModRepo
 
 
 object ModTestData {
