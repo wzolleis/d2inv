@@ -37,6 +37,5 @@ out/
 
 database/999_postgres_anpassungen.txt
 src/main/resources/application-local.properties
-gradle
 
 divinv-frontend/.eslintcache
