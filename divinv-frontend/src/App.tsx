@@ -19,6 +19,8 @@ export const App = () => {
 
     }, []);
 
+    console.log(data)
+
     return (
         <div className="App">
             <div className="col-md-8 mx-auto">
