@@ -34,6 +34,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("javax.xml.bind:jaxb-api:2.3.0")
+    implementation(Libs.liquibaseCore)
     implementation(Libs.kotlinxSerialization)
     implementation(project(":divinv-frontend"))
 
