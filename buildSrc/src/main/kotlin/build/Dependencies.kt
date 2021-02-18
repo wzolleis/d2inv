@@ -7,6 +7,7 @@ object Versions {
     const val mockkSpringVersion = "3.0.1"
     const val kotlinxSerializationVersion = "1.0.1"
     const val arrowVersion = "0.11.0"
+    const val liquibaseVersion = "4.3.1"
 }
 
 object Libs {
@@ -20,6 +21,7 @@ object Libs {
         "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinxSerializationVersion}"
     const val arrowCore = "io.arrow-kt:arrow-core:${Versions.arrowVersion}"
     const val arrowSyntax = "io.arrow-kt:arrow-syntax:${Versions.arrowVersion}"
+    const val liquibaseCore = "org.liquibase:liquibase-core:${Versions.liquibaseVersion}"
 }
 
 
