@@ -1,13 +1,12 @@
 import React from 'react';
-import './App.css';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    NavLink
 } from "react-router-dom";
-import {Home} from "./app/overview/components/HomeComponent";
-import {OverviewComponent} from "./app/overview/components/OverviewComponent";
+import {InventoryComponent} from "../../inventory/components/InventoryComponent";
+import {Home} from "./HomeComponent";
 
 export const App = () => {
     return (
@@ -17,16 +16,16 @@ export const App = () => {
                 <nav>
                     <ul className='header'>
                         <li>
-                            <Link to="/">Home</Link>
+                            <NavLink exact={true} to="/">Home</NavLink>
                         </li>
                         <li>
-                            <Link to="/inventory">Inventory</Link>
+                            <NavLink to="/inventory">Inventory</NavLink>
                         </li>
                     </ul>
                 </nav>
                 <div className='content'>
                     <Switch>
-                        <Route path="/inventory"><OverviewComponent/></Route>
+                        <Route exact={true} path="/inventory"><InventoryComponent/></Route>
                         <Route exact={true} path="/"><Home/></Route>
                     </Switch>
                 </div>

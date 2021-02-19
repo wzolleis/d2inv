@@ -1,5 +1,5 @@
 import React from "react";
 
-export const OverviewComponent = () => {
+export const InventoryComponent = () => {
     return <div>hi overview !!</div>
 }
