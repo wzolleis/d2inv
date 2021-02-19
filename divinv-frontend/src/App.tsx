@@ -1,38 +1,37 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
-import ApiClient from "./app/api/ApiClient";
-import {SkillModComponent} from "./app/mods/components/SkillModComponent";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import {Home} from "./app/overview/components/HomeComponent";
+import {OverviewComponent} from "./app/overview/components/OverviewComponent";
 
 export const App = () => {
-    const [data, setData] = useState<SkillModList>({skillMods: []})
-
-    useEffect(() => {
-        const fetchData = async () => {
-            return await ApiClient.fetchSkillMods()
-        }
-
-        fetchData().then((mods) => {
-            console.log(mods)
-            return mods
-        })
-            .then(data => setData((data)))
-
-    }, []);
-
-    console.log(data)
-
     return (
-        <div className="App">
-            <div className="col-md-8 mx-auto">
-                <h1>Hello, world!</h1>
-                <p>You've successfully loaded up the Bootstrap npm starter project!</p>
-                <p>If this button looks blue and the text purple, you've done it.</p>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click
-                    me!
-                </button>
+        <Router>
+            <div>
+                <h1>Division 2 Inventory</h1>
+                <nav>
+                    <ul className='header'>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/inventory">Inventory</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <div className='content'>
+                    <Switch>
+                        <Route path="/inventory"><OverviewComponent/></Route>
+                        <Route exact={true} path="/"><Home/></Route>
+                    </Switch>
+                </div>
             </div>
-            <SkillModComponent/>
-        </div>
+        </Router>
     );
 }
 
