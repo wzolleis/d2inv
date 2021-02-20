@@ -4,3 +4,7 @@ updates:
     package-ecosystem: npm
     schedule:
         interval: daily
+  - directory: divinv-backend
+    package-ecosystem: gradle
+    schedule:
+      interval: daily
