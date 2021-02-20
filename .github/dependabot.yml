@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - directory: /divinv-frontentd
+  - directory: /divinv-frontend
     package-ecosystem: npm
     schedule:
         interval: daily
