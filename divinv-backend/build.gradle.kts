@@ -7,7 +7,7 @@ plugins {
     id("org.asciidoctor.convert") version "1.5.8"
     kotlin("jvm")
     kotlin("plugin.spring") version "1.4.21"
-    kotlin("plugin.allopen") version "1.3.61"
+    kotlin("plugin.allopen") version "1.4.30"
     kotlin("plugin.serialization") version "1.4.10"
 
 }
