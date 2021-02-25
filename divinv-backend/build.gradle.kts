@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.4.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("org.asciidoctor.convert") version "1.5.8"
+    id("org.asciidoctor.convert") version "2.4.0"
     kotlin("jvm")
     kotlin("plugin.spring") version "1.4.21"
     kotlin("plugin.allopen") version "1.3.61"
