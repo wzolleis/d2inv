@@ -2,13 +2,13 @@ import build.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.4.2"
+    id("org.springframework.boot") version "2.4.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("org.asciidoctor.convert") version "1.5.8"
+    id("org.asciidoctor.convert") version "2.4.0"
     kotlin("jvm")
     kotlin("plugin.spring") version "1.4.21"
-    kotlin("plugin.allopen") version "1.3.61"
-    kotlin("plugin.serialization") version "1.4.10"
+    kotlin("plugin.allopen") version "1.4.30"
+    kotlin("plugin.serialization") version "1.4.30"
 
 }
 
@@ -33,7 +33,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("javax.xml.bind:jaxb-api:2.3.0")
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation(Libs.liquibaseCore)
     implementation(Libs.kotlinxSerialization)
     implementation(project(":divinv-frontend"))
