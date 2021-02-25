@@ -33,7 +33,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("javax.xml.bind:jaxb-api:2.3.0")
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation(Libs.liquibaseCore)
     implementation(Libs.kotlinxSerialization)
     implementation(project(":divinv-frontend"))
