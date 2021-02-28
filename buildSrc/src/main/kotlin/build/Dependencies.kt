@@ -8,6 +8,8 @@ object Versions {
     const val kotlinxSerializationVersion = "1.0.1"
     const val arrowVersion = "0.11.0"
     const val liquibaseVersion = "4.3.1"
+    const val moshiVersion = "1.11.0"
+    const val okHttpVersion = "4.9.0"
 }
 
 object Libs {
@@ -22,6 +24,10 @@ object Libs {
     const val arrowCore = "io.arrow-kt:arrow-core:${Versions.arrowVersion}"
     const val arrowSyntax = "io.arrow-kt:arrow-syntax:${Versions.arrowVersion}"
     const val liquibaseCore = "org.liquibase:liquibase-core:${Versions.liquibaseVersion}"
+    const val moshi = "com.squareup.moshi:moshi:${Versions.moshiVersion}"
+    const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
+    const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Versions.moshiVersion}"
+    const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttpVersion}"
 }
 
 

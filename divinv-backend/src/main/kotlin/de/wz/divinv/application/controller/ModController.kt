@@ -16,7 +16,7 @@ class ModController(val modService: ModService) {
         produces = [MediaType.APPLICATION_JSON_VALUE]
     )
     fun listSkillMods(): ResponseEntity<SkillModList> {
-        val result = modService.listSkillMods()
+//        val result = modService.listSkillMods()
 
         val responseMock = listOf(
             SkillMod(
