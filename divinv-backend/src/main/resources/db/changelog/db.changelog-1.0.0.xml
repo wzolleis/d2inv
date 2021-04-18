@@ -17,40 +17,34 @@
     </changeSet>
 
     <changeSet id="1.0.0.2" author="jack">
-        <createTable tableName="NAMED_GEAR">
+        <createTable tableName="SHEET_GEAR_MODS">
             <column name="id" type="int">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="talent" type="varchar(255)">
+            <column name="type" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="talent_description" type="text">
+            <column name="max_lvl_40" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="brand" type="varchar(255)">
+        </createTable>
+        <createTable tableName="INV_GEAR_MODS">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="core" type="varchar(255)">
+            <column name="type" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="unique_attr" type="varchar(255)">
-                <constraints nullable="true"/>
-            </column>
-            <column name="drop_location" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="mod_slot" type="boolean">
+            <column name="lvl_40" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
-
 </databaseChangeLog>
 
-<!--
-@SequenceGenerator(name = "ITEM_SEQ", sequenceName = "ITEM_SEQ")
-@GeneratedValue(strategy = SEQUENCE, generator = "ITEM_SEQ")
--->

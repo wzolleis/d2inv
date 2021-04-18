@@ -3,8 +3,10 @@ updates:
   - directory: /divinv-frontend
     package-ecosystem: npm
     schedule:
-        interval: daily
+        interval: weekly
+    open-pull-requests-limit: 10
   - directory: divinv-backend
     package-ecosystem: gradle
     schedule:
-      interval: daily
+      interval: weekly
+    open-pull-requests-limit: 10

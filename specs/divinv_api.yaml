@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Div2Inv
+  description: Div2Inv
+  version: 1.0.0
+tags:
+  - name: items
+    description: D2 Inventory Items Api
+servers:
+  - url: http://localhost:8080/api
+paths:
+  /items:
+    get:
+      operationId: listItems
+      description: Abfrage von allen Items
+      tags:
+        - items
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+    post:
+      operationId: createItem
+      summary: Neues Item anlegen
+      description: Neues Item anlegen und speichern
+      tags:
+        - items
+      parameters: [ ]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Item'
+      responses:
+        '201':
+          description: Item erfolgreich angelegt
+components:
+  schemas:
+    Item:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string

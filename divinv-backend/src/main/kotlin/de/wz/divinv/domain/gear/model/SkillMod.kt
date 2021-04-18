@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class SkillMod(
 val id: Long? = null,
-var type: String = "",
+var type: SkillModType,
 var slot: String = "",
 var attribute: String = "",
 var attribute_zusatz: String = "",
