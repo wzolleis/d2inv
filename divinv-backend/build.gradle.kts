@@ -62,6 +62,7 @@ allOpen {
     annotation("javax.persistence.Entity")
     annotation("javax.persistence.Embeddable")
     annotation("javax.persistence.MappedSuperclass")
+    annotation("org.springframework.stereotype.Repository")
 }
 
 sourceSets.getByName("main") {
@@ -82,13 +83,8 @@ tasks.withType<Test> {
 
 openApiGenerate {
     generatorName.set("kotlin")
-
-}
-
-openApiGenerate {
-    generatorName.set("kotlin")
-    inputSpec.set("$rootDir/specs/divinv_api.yaml".toString())
-    outputDir.set("$buildDir/generated".toString())
+    inputSpec.set("$rootDir/specs/divinv_api.yaml")
+    outputDir.set("$buildDir/generated")
     apiPackage.set("de.wz.divinv.generated.api")
     invokerPackage.set("de.wz.divinv.generated.invoker")
     modelPackage.set("de.wz.divinv.generated.model")

@@ -1,19 +1,11 @@
 package de.wz.divinv.infrastructure.mods.repo
 
-import de.wz.divinv.domain.gear.model.Gear
-import de.wz.divinv.domain.gear.repo.GearRepo
+import de.wz.divinv.domain.gear.model.SkillMod
+import de.wz.divinv.domain.gear.repo.SkillModRepo
 
-class MockGearRepository : GearRepo {
-    override fun ListAll(): List<Gear> {
-        return listOf(gear)
+class SkillModRepositoryMock : SkillModRepo {
+    override fun listAllSkillMod(): List<SkillMod> {
+        TODO("Not yet implemented")
     }
-
-    companion object {
-        val gear: Gear = Gear(
-                name = "testGear",
-                id = 1
-        )
-    }
-
 }
 
