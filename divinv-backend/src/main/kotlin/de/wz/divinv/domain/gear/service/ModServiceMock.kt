@@ -1,4 +1,4 @@
-package de.wz.divinv.application.service
+package de.wz.divinv.domain.gear.service
 
 import de.wz.divinv.domain.gear.model.SkillMod
 import de.wz.divinv.domain.gear.repo.SkillModRepo
