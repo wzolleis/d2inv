@@ -1,5 +1,6 @@
-build/
-
 node_modules
+build
 
-divinv-frontend/.eslintcache
+.eslintcache
+
+src/api/apiTypes.d.ts
