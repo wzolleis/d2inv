@@ -38,7 +38,7 @@
     "@storybook/react": "^6.2.9",
     "@testing-library/react": "^11.2.6",
     "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/user-event": "^13.1.5",
+    "@testing-library/user-event": "^13.1.8",
     "copyfiles": "^2.4.1",
     "css-loader": "^5.2.4",
     "node-sass": "^4.14.1",
