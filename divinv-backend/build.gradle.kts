@@ -70,14 +70,6 @@ sourceSets.getByName("main") {
     java.srcDir("src/main/kotlin")
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "1.8"
-        useIR = true
-    }
-}
-
 tasks.withType<Test> {
     useJUnitPlatform()
 }

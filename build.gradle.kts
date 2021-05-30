@@ -19,6 +19,8 @@ subprojects {
     tasks.withType<KotlinCompile>().configureEach {
         println("Configuring $name in project ${project.name}...")
         kotlinOptions {
+            freeCompilerArgs = listOf("-Xjsr305=strict")
+            useIR = true
             jvmTarget = "1.8"
             freeCompilerArgs = listOf("-Xjsr305=strict")
         }
