@@ -1,4 +1,4 @@
-package de.wz.divinv.domain.gear.model
+package de.wz.divinv.mods.domain
 
 enum class SkillModType {
     OFFENSIVE, DEFENSIVE, UTILITY

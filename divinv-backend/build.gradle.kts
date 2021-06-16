@@ -34,6 +34,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("javax.xml.bind:jaxb-api:2.3.1")
+    implementation("com.h2database:h2")
 //    implementation("org.openapitools:openapi-generator-gradle-plugin:5.0.0")
     implementation(Libs.moshi) // json library
     implementation(Libs.moshiKotlin)

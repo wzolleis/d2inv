@@ -1,9 +1,10 @@
 package de.wz.divinv.application.controller
 
 import com.ninjasquad.springmockk.MockkBean
-import de.wz.divinv.domain.gear.model.SkillModList
-import de.wz.divinv.domain.gear.service.ModService
-import de.wz.divinv.infrastructure.mods.repo.ModTestData
+import de.wz.divinv.mods.domain.model.SkillModList
+import de.wz.divinv.mods.application.ModController
+import de.wz.divinv.mods.domain.service.ModService
+import de.wz.divinv.mods.infrastructure.ModTestData
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.collections.shouldContainExactlyInAnyOrder
 import io.kotest.spring.SpringListener

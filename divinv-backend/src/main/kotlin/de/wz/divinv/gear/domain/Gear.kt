@@ -1,3 +1,3 @@
-package de.wz.divinv.domain.gear.model
+package de.wz.divinv.gear.domain
 
 data class Gear(val id: Long, val name: String)

@@ -5,7 +5,7 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$PROJECT_DIR$/../../../program_data/gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.4.5/adadfe2ded50ef04fcc50c66d9694230c7dc021b/spring-boot-configuration-processor-2.4.5.jar" />
+          <entry name="$PROJECT_DIR$/../../../program_data/gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.5.1/2a5077776e83fe3ed7a454d5483076edf6f7081d/spring-boot-configuration-processor-2.5.1.jar" />
         </processorPath>
         <module name="divinv-app.divinv-backend.main" />
       </profile>

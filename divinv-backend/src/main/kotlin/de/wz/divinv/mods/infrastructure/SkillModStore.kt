@@ -1,10 +1,7 @@
-package de.wz.divinv.infrastructure.mods.repo
+package de.wz.divinv.mods.infrastructure
 
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
-
-@Repository
-interface GearModStore : CrudRepository<GearModEntity, Long>
 
 @Repository
 interface SkillModStore : CrudRepository<SkillModEntity, Long> {
