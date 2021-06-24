@@ -1,6 +1,6 @@
-package de.wz.divinv.mods.domain.model
+package de.wz.divinv.skillmods.domain.model
 
-import de.wz.divinv.mods.domain.SkillModType
+import de.wz.divinv.skillmods.domain.SkillModType
 import kotlinx.serialization.Serializable
 
 @Serializable

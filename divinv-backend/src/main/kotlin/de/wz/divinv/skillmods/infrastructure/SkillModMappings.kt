@@ -1,8 +1,8 @@
 package de.wz.divinv.infrastructure.mods.repo
 
-import de.wz.divinv.mods.domain.model.SkillMod
-import de.wz.divinv.mods.domain.SkillModType
-import de.wz.divinv.mods.infrastructure.SkillModEntity
+import de.wz.divinv.skillmods.domain.model.SkillMod
+import de.wz.divinv.skillmods.domain.SkillModType
+import de.wz.divinv.skillmods.infrastructure.SkillModEntity
 import java.lang.IllegalArgumentException
 
 fun SkillModEntity.toDomain(): SkillMod {

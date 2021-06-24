@@ -1,7 +1,7 @@
-package de.wz.divinv.mods.domain.service
+package de.wz.divinv.skillmods.domain.service
 
-import de.wz.divinv.mods.domain.model.SkillMod
-import de.wz.divinv.mods.domain.repo.SkillModRepo
+import de.wz.divinv.skillmods.domain.model.SkillMod
+import de.wz.divinv.skillmods.domain.repo.SkillModRepo
 
 class ModServiceJpa(private val skillModRepo: SkillModRepo) : ModService {
     override fun listSkillMods(): List<SkillMod> {

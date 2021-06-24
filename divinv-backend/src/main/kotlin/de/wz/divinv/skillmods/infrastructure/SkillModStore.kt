@@ -1,4 +1,4 @@
-package de.wz.divinv.mods.infrastructure
+package de.wz.divinv.skillmods.infrastructure
 
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository

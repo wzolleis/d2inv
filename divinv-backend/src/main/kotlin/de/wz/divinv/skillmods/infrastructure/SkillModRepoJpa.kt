@@ -1,7 +1,7 @@
-package de.wz.divinv.mods.infrastructure
+package de.wz.divinv.skillmods.infrastructure
 
-import de.wz.divinv.mods.domain.model.SkillMod
-import de.wz.divinv.mods.domain.repo.SkillModRepo
+import de.wz.divinv.skillmods.domain.model.SkillMod
+import de.wz.divinv.skillmods.domain.repo.SkillModRepo
 import de.wz.divinv.infrastructure.mods.repo.toDomain
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.transaction.annotation.Transactional

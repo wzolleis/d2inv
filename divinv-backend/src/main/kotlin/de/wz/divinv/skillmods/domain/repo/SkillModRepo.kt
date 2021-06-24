@@ -1,6 +1,6 @@
-package de.wz.divinv.mods.domain.repo
+package de.wz.divinv.skillmods.domain.repo
 
-import de.wz.divinv.mods.domain.model.SkillMod
+import de.wz.divinv.skillmods.domain.model.SkillMod
 import org.springframework.stereotype.Repository
 
 @Repository

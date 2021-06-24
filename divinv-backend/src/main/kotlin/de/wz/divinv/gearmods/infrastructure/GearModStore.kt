@@ -1,4 +1,4 @@
-package de.wz.divinv.gear.infrastructure
+package de.wz.divinv.gearmods.infrastructure
 
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository

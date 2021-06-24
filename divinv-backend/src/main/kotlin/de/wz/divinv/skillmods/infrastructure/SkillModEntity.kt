@@ -1,4 +1,4 @@
-package de.wz.divinv.mods.infrastructure
+package de.wz.divinv.skillmods.infrastructure
 
 import javax.persistence.*
 

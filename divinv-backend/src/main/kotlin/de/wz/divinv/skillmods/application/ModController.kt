@@ -1,7 +1,7 @@
-package de.wz.divinv.mods.application
+package de.wz.divinv.skillmods.application
 
-import de.wz.divinv.mods.domain.model.SkillModList
-import de.wz.divinv.mods.domain.service.ModService
+import de.wz.divinv.skillmods.domain.model.SkillModList
+import de.wz.divinv.skillmods.domain.service.ModService
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping

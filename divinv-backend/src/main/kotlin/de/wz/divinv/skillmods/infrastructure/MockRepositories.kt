@@ -1,8 +1,8 @@
-package de.wz.divinv.mods.infrastructure
+package de.wz.divinv.skillmods.infrastructure
 
-import de.wz.divinv.mods.domain.model.SkillMod
-import de.wz.divinv.mods.domain.SkillModType
-import de.wz.divinv.mods.domain.repo.SkillModRepo
+import de.wz.divinv.skillmods.domain.model.SkillMod
+import de.wz.divinv.skillmods.domain.SkillModType
+import de.wz.divinv.skillmods.domain.repo.SkillModRepo
 
 
 object ModTestData {
