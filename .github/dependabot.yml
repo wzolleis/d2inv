@@ -5,10 +5,10 @@ updates:
     schedule:
         interval: weekly
     open-pull-requests-limit: 10
-    target-branch: dependency_updates
+    target-branch: main
   - directory: divinv-backend
     package-ecosystem: gradle
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
-    target-branch: dependency_updates
+    target-branch: main
