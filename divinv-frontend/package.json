@@ -39,7 +39,7 @@
     "openapi-client-axios-typegen": "^3.14.1",
     "path": "^0.12.7",
     "sass-loader": "^12.1.0",
-    "style-loader": "^2.0.0"
+    "style-loader": "^3.1.0"
   },
   "comments": {
     "sass-loader": "11.x funktioniert nicht, siehe https://exerror.com/typeerror-this-getoptions-is-not-a-function-in-vue-js/",
