@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "target": "es5",
     "outDir": "build",
     "lib": [
@@ -14,8 +19,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,

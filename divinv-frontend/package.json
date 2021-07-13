@@ -14,7 +14,6 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "typescript": "^4.3.5",
@@ -22,6 +21,9 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.1.9",
@@ -31,32 +33,44 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-redux": "^7.1.18",
     "@types/react-router-dom": "^5.1.8",
+    "babel-jest": "^27.0.6",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
     "copyfiles": "^2.4.1",
     "css-loader": "^5.2.7",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "openapi-client-axios-typegen": "^3.14.1",
     "path": "^0.12.7",
     "sass-loader": "^12.1.0",
-    "style-loader": "^3.1.0"
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "comments": {
     "sass-loader": "11.x funktioniert nicht, siehe https://exerror.com/typeerror-this-getoptions-is-not-a-function-in-vue-js/",
     "node-sass-6.x": "passt zu node 16.x"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build-prod",
     "copy:files": "copyfiles -u 1 build/**/* ../divinv-backend/build/resources/main/public/ui-static",
     "prebuild": "npm run typegen-api",
     "postbuild": "npm run copy:files",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "typegen-api": "typegen ../specs/divinv_api.yaml > ./src/api/apiTypes.d.ts",
-    "typegen-pets": "typegen ../specs/pets.yaml > ./src/api/pets.d.ts"
+    "typegen-pets": "typegen ../specs/pets.yaml > ./src/api/pets.d.ts",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production",
+    "test": "jest",
+    "start": "webpack serve --open"
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
