@@ -2,14 +2,14 @@ import build.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.5.1"
+    id("org.springframework.boot") version "2.5.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("org.asciidoctor.convert") version "2.4.0"
-    id("org.openapi.generator") version "5.1.1"
+    id("org.openapi.generator") version "5.2.0"
     kotlin("jvm")
-    kotlin("plugin.spring") version "1.5.10"
-    kotlin("plugin.allopen") version "1.5.10"
-    kotlin("plugin.serialization") version "1.5.10"
+    kotlin("plugin.spring") version "1.5.21"
+    kotlin("plugin.allopen") version "1.5.21"
+    kotlin("plugin.serialization") version "1.5.21"
 }
 
 group = "de.wz.divinv"
