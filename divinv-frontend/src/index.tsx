@@ -5,7 +5,7 @@ import "./scss/index.scss"
 import App from "./common/components/App";
 import {Provider} from "react-redux";
 import store from "./app/state/store";
-
+import 'bootstrap';
 
 const rootElement = document.getElementById('root')
 

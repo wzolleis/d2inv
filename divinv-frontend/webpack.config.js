@@ -20,12 +20,25 @@ const config = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader'
-                ]
+                test: /\.(scss)$/,
+                use: [{
+                    loader: 'style-loader', // inject CSS to page
+                }, {
+                    loader: 'css-loader', // translates CSS into CommonJS modules
+                }, {
+                    loader: 'postcss-loader', // Run postcss actions
+                    options: {
+                        postcssOptions: {
+                            plugins: function () { // postcss plugins, can be exported to postcss.config.js
+                                return [
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    }
+                }, {
+                    loader: 'sass-loader' // compiles Sass to CSS
+                }]
             },
             {
                 test: /\.png$/,
