@@ -1,14 +1,22 @@
 {
-  presets: [
+  "presets": [
     [
-      '@babel/preset-env',
+      "env",
       {
-        modules: false
+        "modules": false
       }
     ],
-    '@babel/preset-react'
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
-  plugins: [
-    'react-hot-loader/babel'
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  },
+  "plugins": [
+    "react-hot-loader/babel"
   ]
 }
