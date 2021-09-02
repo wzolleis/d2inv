@@ -1,16 +1,16 @@
 import {combineReducers} from "redux";
 import {fetchReducer} from "./fetchReducer";
-import {gearReducer} from "../../gear/reducers/gearReducer"
+import {itemReducer} from "../../items/reducers/itemReducer";
 
 
-export const itemReducer = combineReducers({
-    gearState: gearReducer
+export const reducers = combineReducers({
+    itemState: itemReducer
 })
 
 
 export const rootReducer = combineReducers({
     fetchState: fetchReducer,
-    itemState: itemReducer
+    itemState: reducers
 })
 
 

@@ -3,16 +3,16 @@ import {Dispatch} from "redux";
 
 export const actionCreator = actionCreatorFactory();
 
-const FETCH_GEAR_ACTION = 'FETCH_GEAR'
+const FETCH_ITEMS_ACTION = 'FETCH_ITEMS'
 
-export const FetchGearAction = actionCreator.async<{},   // parameter type
-    { gear: Gear[] },   // success type
+export const FetchItemAction = actionCreator.async<{},   // parameter type
+    { gear: Item[] },   // success type
     { error: Error }   // error type
-    >(FETCH_GEAR_ACTION);
+    >(FETCH_ITEMS_ACTION);
 
-export const fetchGear = () => {
+export const fetchItems = () => {
     return (dispatch: Dispatch<AnyAction>) => {
-        dispatch(FetchGearAction.started)
-        dispatch(FetchGearAction.done)
+        dispatch(FetchItemAction.started)
+        dispatch(FetchItemAction.done)
     }
 }

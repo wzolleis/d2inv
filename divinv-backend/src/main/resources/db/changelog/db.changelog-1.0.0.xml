@@ -17,34 +17,13 @@
     </changeSet>
 
     <changeSet id="1.0.0.2" author="jack">
-        <createTable tableName="SHEET_GEAR_MODS">
-            <column name="id" type="int">
+        <createTable tableName="ITEMS">
+            <column name="id" type="text">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="name" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="type" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="max_lvl_40" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
+            <column name="type" type="text"/>
+            <column name="content" type="jsonb"/>
         </createTable>
-        <createTable tableName="INV_GEAR_MODS">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="name" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="type" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="lvl_40" type="varchar(255)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
+      </changeSet>
 </databaseChangeLog>
 

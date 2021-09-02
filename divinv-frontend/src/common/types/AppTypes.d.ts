@@ -1,8 +1,8 @@
 interface AppState {
-    items: Gear
+    items: Item[]
 }
 
-interface Gear {
+interface Item {
     id: string,
     name: string
 }

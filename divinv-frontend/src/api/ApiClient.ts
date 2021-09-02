@@ -18,7 +18,7 @@ class ApiClient {
     //     }
     // }
 
-    async addGear(gear: Gear) {
+    async addGear(gear: Item) {
 
     }
 }

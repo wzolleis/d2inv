@@ -7,7 +7,7 @@ tags:
   - name: items
     description: D2 Inventory Items Api
 servers:
-  - url: http://localhost:8080/divinv/api
+  - url: http://localhost:8080/api
 paths:
   /items:
     get:
