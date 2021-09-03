@@ -18,6 +18,14 @@ tasks.assemble {
     dependsOn("npm_run_build")
 }
 
+node {
+    // Version of node to use.
+    version = "16.2.0"
+
+    // Version of npm to use.
+    npmVersion = "7.13.0"
+}
+
 /**
 * Definiert die Task, die den Build (npm build) ausführt
 */
