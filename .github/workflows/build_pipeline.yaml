@@ -40,7 +40,7 @@ jobs:
           node-version: 16
       - name: build frontend
         run: |
-          cd frontend
+          cd divinv-frontend
           npm ci
           npm run build
       - name: Cache Gradle packages
