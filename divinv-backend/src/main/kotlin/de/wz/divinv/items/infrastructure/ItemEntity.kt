@@ -1,5 +1,6 @@
 package de.wz.divinv.items.infrastructure
 
+import de.wz.divinv.infrastructure.AbstractBaseEntity
 import java.util.*
 import javax.persistence.Entity
 import javax.persistence.Table

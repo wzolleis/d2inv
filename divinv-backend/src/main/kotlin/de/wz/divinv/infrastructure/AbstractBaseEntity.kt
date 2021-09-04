@@ -1,4 +1,4 @@
-package de.wz.divinv.items.infrastructure
+package de.wz.divinv.infrastructure
 
 import org.springframework.data.domain.Persistable
 import java.util.*

@@ -35,6 +35,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation("com.h2database:h2")
+    implementation("javax.validation:validation-api:2.0.1.Final")
+
 //    implementation("org.openapitools:openapi-generator-gradle-plugin:5.0.0")
     implementation(Libs.moshi) // json library
     implementation(Libs.moshiKotlin)
@@ -76,11 +78,17 @@ tasks.withType<Test> {
 }
 
 openApiGenerate {
-    generatorName.set("kotlin")
+    generatorName.set("kotlin-spring")
     inputSpec.set("$rootDir/specs/divinv_api.yaml")
     outputDir.set("$buildDir/generated")
+    packageName.set("de.wz.divinv.generated")
     apiPackage.set("de.wz.divinv.generated.api")
     invokerPackage.set("de.wz.divinv.generated.invoker")
     modelPackage.set("de.wz.divinv.generated.model")
-    configOptions.set(mapOf("dateLibrary" to "java8"))
+    configOptions.set(mapOf(
+        "dateLibrary" to "java8",
+        "useBeanValidation" to "false",
+        "gradleBuildFile" to "false",
+        "interfaceOnly" to "true"
+    ))
 }
