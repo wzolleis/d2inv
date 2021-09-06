@@ -10,6 +10,7 @@ plugins {
     kotlin("plugin.spring") version "1.5.30"
     kotlin("plugin.allopen") version "1.5.30"
     kotlin("plugin.serialization") version "1.5.30"
+    kotlin("kapt")
 }
 
 group = "de.wz.divinv"
@@ -37,13 +38,9 @@ dependencies {
     implementation("com.h2database:h2")
     implementation("javax.validation:validation-api:2.0.1.Final")
 
-//    implementation("org.openapitools:openapi-generator-gradle-plugin:5.0.0")
-    implementation(Libs.moshi) // json library
-    implementation(Libs.moshiKotlin)
-    implementation(Libs.moshiAdapters)
+    implementation(Libs.gson)
     implementation(Libs.okHttp) // http client / server
     implementation(Libs.liquibaseCore)
-    implementation(Libs.kotlinxSerialization)
     implementation(project(":divinv-frontend"))
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
@@ -85,10 +82,13 @@ openApiGenerate {
     apiPackage.set("de.wz.divinv.generated.api")
     invokerPackage.set("de.wz.divinv.generated.invoker")
     modelPackage.set("de.wz.divinv.generated.model")
-    configOptions.set(mapOf(
-        "dateLibrary" to "java8",
-        "useBeanValidation" to "false",
-        "gradleBuildFile" to "false",
-        "interfaceOnly" to "true"
-    ))
+    configOptions.set(
+        mapOf(
+            "dateLibrary" to "java8",
+            "useBeanValidation" to "false",
+            "gradleBuildFile" to "false",
+            "interfaceOnly" to "true",
+            "serializableModel" to "true"
+        )
+    )
 }

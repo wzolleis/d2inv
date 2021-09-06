@@ -45,6 +45,9 @@ components:
       type: object
       required:
         - id
+        - itemType
       properties:
         id:
+          type: string
+        itemType:
           type: string
