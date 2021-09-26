@@ -1,4 +1,4 @@
-package de.wz.divinv.application.controller
+package de.wz.divinv.infrastructure
 
 import io.kotest.core.spec.style.StringSpec
 
