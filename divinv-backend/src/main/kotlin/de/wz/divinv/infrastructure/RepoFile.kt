@@ -1,4 +1,7 @@
 package de.wz.divinv.infrastructure
 
-class RepoFile {
+import java.io.File
+
+class RepoFile(val file: File) {
+
 }

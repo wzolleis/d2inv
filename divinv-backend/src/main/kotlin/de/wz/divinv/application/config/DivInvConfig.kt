@@ -8,12 +8,13 @@ import de.wz.divinv.items.infrastructure.ItemRepoJson
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile
+import java.io.File
 
 @Configuration
 @Profile("!test")
 class DivInvConfig {
     @Bean
-    fun itemRepoFile(): RepoFile = RepoFile()
+    fun itemRepoFile(): RepoFile = RepoFile(file = File(""))
 
     @Bean
     fun itemRepo(): ItemRepo = ItemRepoJson(itemRepoFile())
