@@ -1,6 +1,7 @@
-package de.wz.divinv.items.domain.model
+package de.wz.divinv.items.infrastructure
 
 import com.google.gson.Gson
+import de.wz.divinv.items.domain.model.ItemModel
 
 fun ItemModel.toJson(): String {
     return Gson().toJson(this)

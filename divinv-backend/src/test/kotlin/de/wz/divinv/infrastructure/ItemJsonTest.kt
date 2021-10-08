@@ -2,8 +2,8 @@ package de.wz.divinv.infrastructure
 
 import de.wz.divinv.items.domain.model.ItemId
 import de.wz.divinv.items.domain.model.ItemModel
-import de.wz.divinv.items.domain.model.fromJson
-import de.wz.divinv.items.domain.model.toJson
+import de.wz.divinv.items.infrastructure.fromJson
+import de.wz.divinv.items.infrastructure.toJson
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 

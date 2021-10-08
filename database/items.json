@@ -1,4 +1,61 @@
 {
-  "stammdaten": [],
-  "inventory": []
+  "exotic_gear": [
+    {
+      "type": "Assault Rifle",
+      "name": "The Bighorn",
+      "talents": [
+        {
+          "name": "Big Game Hunter",
+          "description": "When scoped, switches to semi-automatic-fire mode, dealing 450% weapon damage with each shot"
+        },
+        {
+          "name": "headshot",
+          "description": "Headshots grant 2% headshot damage. Stacks up to 50 times. Once at full stacks, 10 stacks decay every 4 secondsuntil all stacks have been removed. Headshots delay decaying of stacks"
+        }
+      ],
+      "fixed_attributes": [
+        "Assault Rifle Damage",
+        "Health Damage",
+        "Critical Hit Damage"
+      ],
+      "mods": [
+        {
+          "optics:": "+30% Headshot Damage",
+          "magazine": "+10% Reload Speed",
+          "underbarrel": "+10% Stability",
+          "muzzle": "10% Accuracy"
+        }
+      ]
+    }
+  ],
+  "named_items": [
+    {
+      "type": "backpack",
+      "brand_name": "Alps",
+      "name": "Percussive Maintenance",
+      "core": "Skill Tier",
+      "unique_attribute": "",
+      "talent": "Perfect Tech Support",
+      "talent_description": "Skill kills increase total skill damage by 25% for 27 seconds.",
+      "drop_zone": "Light Zone"
+    }
+  ],
+  "named_weapons": [
+    {
+      "type": "Assault Rifle",
+      "variant": "AK-47",
+      "name": "Maniac",
+      "talent": "Perfectly Overflowing",
+      "talent_description": "Every 2 reloads from empty increases your base magazine capacity by 100%",
+      "drop_location": "Dark Zone"
+    }
+  ],
+  "skill_mods": [
+    {
+      "skill_name": "Chem Launcher",
+      "slot": "Agitator Slot",
+      "attribute": "Burn Strength",
+      "max_lvl_40": "7.5%"
+    }
+  ]
 }
