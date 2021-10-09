@@ -8,7 +8,7 @@ plugins {
     id("org.openapi.generator") version "5.2.0"
     kotlin("jvm")
     kotlin("plugin.spring") version "1.5.30"
-    kotlin("plugin.allopen") version "1.5.30"
+    kotlin("plugin.allopen") version "1.5.31"
     kotlin("plugin.serialization") version "1.5.30"
     kotlin("kapt")
 }
