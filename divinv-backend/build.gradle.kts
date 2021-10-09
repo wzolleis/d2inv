@@ -5,7 +5,7 @@ plugins {
     id("org.springframework.boot") version "2.5.5"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("org.asciidoctor.convert") version "2.4.0"
-    id("org.openapi.generator") version "5.2.0"
+    id("org.openapi.generator") version "5.2.1"
     kotlin("jvm")
     kotlin("plugin.spring") version "1.5.31"
     kotlin("plugin.allopen") version "1.5.31"
