@@ -2,13 +2,13 @@ import build.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.5.3"
+    id("org.springframework.boot") version "2.5.5"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("org.asciidoctor.convert") version "2.4.0"
     id("org.openapi.generator") version "5.2.0"
     kotlin("jvm")
-    kotlin("plugin.spring") version "1.5.30"
-    kotlin("plugin.allopen") version "1.5.30"
+    kotlin("plugin.spring") version "1.5.31"
+    kotlin("plugin.allopen") version "1.5.31"
     kotlin("plugin.serialization") version "1.5.30"
     kotlin("kapt")
 }
