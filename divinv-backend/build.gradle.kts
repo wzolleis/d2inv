@@ -74,21 +74,21 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-openApiGenerate {
-    generatorName.set("kotlin-spring")
-    inputSpec.set("$rootDir/specs/divinv_api.yaml")
-    outputDir.set("$buildDir/generated")
-    packageName.set("de.wz.divinv.generated")
-    apiPackage.set("de.wz.divinv.generated.api")
-    invokerPackage.set("de.wz.divinv.generated.invoker")
-    modelPackage.set("de.wz.divinv.generated.model")
-    configOptions.set(
-        mapOf(
-            "dateLibrary" to "java8",
-            "useBeanValidation" to "false",
-            "gradleBuildFile" to "false",
-            "interfaceOnly" to "true",
-            "serializableModel" to "true"
-        )
-    )
-}
+//openApiGenerate {
+//    generatorName.set("kotlin-spring")
+//    inputSpec.set("$rootDir/specs/divinv_api.yaml")
+//    outputDir.set("$buildDir/generated")
+//    packageName.set("de.wz.divinv.generated")
+//    apiPackage.set("de.wz.divinv.generated.api")
+//    invokerPackage.set("de.wz.divinv.generated.invoker")
+//    modelPackage.set("de.wz.divinv.generated.model")
+//    configOptions.set(
+//        mapOf(
+//            "dateLibrary" to "java8",
+//            "useBeanValidation" to "false",
+//            "gradleBuildFile" to "false",
+//            "interfaceOnly" to "true",
+//            "serializableModel" to "true"
+//        )
+//    )
+//}

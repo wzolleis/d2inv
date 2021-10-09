@@ -1,11 +1,21 @@
 package de.wz.divinv.testdata
 
-import de.wz.divinv.items.domain.model.ItemId
-import de.wz.divinv.items.domain.model.ItemModel
+import de.wz.divinv.items.domain.model.*
 
 object DivinvTestData {
-    val basicItemModel = ItemModel(
-        id = ItemId("123"),
-        itemType = "mod"
-    )
+    val applicationData: AppDataModel =
+        AppDataModel(
+            exoticGear = ExoticGearModel(
+                listOf()
+            ),
+            namedItems = NamedItemModel(
+                listOf()
+            ),
+            nameddWeapons = NamedWeaponModel(
+                listOf()
+            ),
+           skillMods = SkillModModel(
+               listOf()
+           ) ,
+        )
 }
