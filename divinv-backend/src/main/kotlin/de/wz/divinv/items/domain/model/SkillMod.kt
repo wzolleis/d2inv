@@ -1,5 +1,8 @@
 package de.wz.divinv.items.domain.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class SkillMod(
     val name: AppTypes.Name,
     val slot: AppTypes.Slot,

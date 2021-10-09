@@ -1,7 +1,8 @@
 package de.wz.divinv.items.domain.model
 
-typealias ItemAttributes = Map<String, String>
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class AppDataModel(
     val exoticGear: ExoticGearModel,
     val namedItems: NamedItemModel,

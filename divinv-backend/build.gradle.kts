@@ -5,12 +5,10 @@ plugins {
     id("org.springframework.boot") version "2.5.5"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("org.asciidoctor.convert") version "2.4.0"
-    id("org.openapi.generator") version "5.2.0"
     kotlin("jvm")
     kotlin("plugin.spring") version "1.5.31"
     kotlin("plugin.allopen") version "1.5.31"
-    kotlin("plugin.serialization") version "1.5.30"
-    kotlin("kapt")
+    kotlin("plugin.serialization") version "1.5.31"
 }
 
 group = "de.wz.divinv"
@@ -31,20 +29,17 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-//    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation("com.h2database:h2")
     implementation("javax.validation:validation-api:2.0.1.Final")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
 
-    implementation(Libs.gson)
     implementation(Libs.okHttp) // http client / server
-//    implementation(Libs.liquibaseCore)
     implementation(project(":divinv-frontend"))
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-//    runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude("org.junit.vintage:junit-vintage-engine")

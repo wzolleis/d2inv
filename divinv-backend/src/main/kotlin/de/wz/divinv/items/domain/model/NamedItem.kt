@@ -1,5 +1,8 @@
 package de.wz.divinv.items.domain.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class NamedItem(
   val type: AppTypes.Type,
   val brandName: AppTypes.BrandName,
