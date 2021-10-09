@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "/ui-static",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "bootstrap": "5.1.3",
     "bootstrap-icons": "^1.5.0",
     "jquery": "^3.6.0",
