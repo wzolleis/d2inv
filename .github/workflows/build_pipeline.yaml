@@ -50,7 +50,6 @@ jobs:
               ${{ runner.os }}-gradle-
       # Runs a set of commands using the runners shell
       - name: generate source
-        run: ./gradlew openApiGenerate
       - name: build backend
         run: ./gradlew assemble
       - name: Cleanup Gradle Cache
