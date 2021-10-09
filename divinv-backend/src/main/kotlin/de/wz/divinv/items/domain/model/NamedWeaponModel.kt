@@ -4,5 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class NamedWeaponModel(
-    val namedWeapons: List<NamedWeapon>
+    val data: List<NamedWeapon>
 )

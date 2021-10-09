@@ -4,5 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class NamedItemModel(
-    val namedItems: List<NamedItem>
+    val data: List<NamedItem>
 )

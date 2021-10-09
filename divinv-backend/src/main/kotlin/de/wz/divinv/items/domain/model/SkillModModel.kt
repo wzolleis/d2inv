@@ -4,5 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class SkillModModel(
-    val skillMods: List<SkillMod>
+    val data: List<SkillMod>
 )

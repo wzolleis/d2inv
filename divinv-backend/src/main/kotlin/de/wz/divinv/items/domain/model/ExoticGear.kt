@@ -8,6 +8,6 @@ data class ExoticGear(
     val type: Type,
     val name: Name,
     val talents: List<Talent> = emptyList(),
-    val attributes: List<WeaponAttribute>,
+    val attributes: List<WeaponAttribute> = emptyList(),
     val mods: WeaponMods
 )
