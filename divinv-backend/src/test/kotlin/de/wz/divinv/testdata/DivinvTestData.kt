@@ -9,22 +9,20 @@ object DivinvTestData {
             exoticGear = ExoticGearModel(
                 listOf(
                     ExoticGear(
-                        type = Type("Assault Rifle"),
-                        name = Name("The Bighorn"),
+                        type = "Assault Rifle",
+                        name = "The Bighorn",
                         talents = listOf(
                             Talent(
-                                name = Name("Big Game Hunter"),
-                                Description(
-                                    """|When scoped, switches to semi-automatic-fire mode,
-                                       |dealing 450% weapon damage with each shot.
-                                       |""".oneline()
-                                )
+                                name = "Big Game Hunter",
+                                description = """|When scoped, switches to semi-automatic-fire mode,
+                                   |dealing 450% weapon damage with each shot.
+                                   |""".oneline()
                             )
                         ),
                         attributes = listOf(
-                            WeaponAttribute("Assault Rifle Damage"),
-                            WeaponAttribute("Health Damage"),
-                            WeaponAttribute("Critical Hit Damage")
+                            "Assault Rifle Damage",
+                            "Health Damage",
+                            "Critical Hit Damage"
                         ),
                         mods = WeaponMods(
                             optics = "+30% Headshot Damage",

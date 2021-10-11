@@ -1,13 +1,12 @@
 package de.wz.divinv.items.domain.model
 
-import de.wz.divinv.items.domain.model.AppTypes.*
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class ExoticGear(
-    val type: Type,
-    val name: Name,
+    val type: String,
+    val name: String,
     val talents: List<Talent> = emptyList(),
-    val attributes: List<WeaponAttribute> = emptyList(),
+    val attributes: List<String> = emptyList(),
     val mods: WeaponMods
 )
