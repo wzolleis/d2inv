@@ -34,7 +34,7 @@ dependencies {
     implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation("com.h2database:h2")
     implementation("javax.validation:validation-api:2.0.1.Final")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
 
     implementation(Libs.okHttp) // http client / server
     implementation(project(":divinv-frontend"))
