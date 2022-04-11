@@ -57,7 +57,7 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.1.0"
+    "webpack-dev-server": "^4.8.1"
   },
   "comments": {
     "sass-loader": "11.x funktioniert nicht, siehe https://exerror.com/typeerror-this-getoptions-is-not-a-function-in-vue-js/",
