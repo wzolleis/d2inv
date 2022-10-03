@@ -8,7 +8,7 @@ plugins {
     kotlin("jvm")
     kotlin("plugin.spring") version "1.6.10"
     kotlin("plugin.allopen") version "1.6.10"
-    kotlin("plugin.serialization") version "1.6.10"
+    kotlin("plugin.serialization") version "1.7.20"
 }
 
 group = "de.wz.divinv"
